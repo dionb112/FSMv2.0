@@ -58,10 +58,6 @@ int main()
 				{
 					input.setCurrent(Input::Action::RIGHT);
 				}
-				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-				{
-					input.setCurrent(Input::Action::JUMP);
-				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 				{
 					input.setCurrent(Input::Action::HAMMER);
@@ -69,6 +65,11 @@ int main()
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) 
 				{
 					input.setCurrent(Input::Action::CLIMB); //toDO: have functionality for climbing for if player walks into climbable object for game (not using button press like here)
+				}
+			case sf::Event::TextEntered:
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				{
+					input.setCurrent(Input::Action::JUMP);
 				}
 				break;
 			default:
