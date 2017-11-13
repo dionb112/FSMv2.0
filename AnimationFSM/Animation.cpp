@@ -28,32 +28,38 @@ State* Animation::getPrevious()
 	return m_previous;
 }
 
-void Animation::idle()
+void Animation::idle(AnimatedSprite& s)
 {
-	m_current->idle(this);
+	m_animated_sprite = s;
+	m_current->idle(this, s);
 }
 
-void Animation::jumping()
+void Animation::jumping(AnimatedSprite& s)
 {
-	m_current->jumping(this);
+	m_animated_sprite = s;
+	m_current->jumping(this, s);
 }
 
-void Animation::climbing()
+void Animation::climbing(AnimatedSprite& s)
 {
-	m_current->climbing(this);
+	m_animated_sprite = s;
+	m_current->climbing(this, s);
 }
 
-void Animation::left()
+void Animation::left(AnimatedSprite& s)
 {
-	m_current->left(this);
+	m_animated_sprite = s;
+	m_current->left(this, s);
 }
 
-void Animation::right()
+void Animation::right(AnimatedSprite& s)
 {
-	m_current->right(this);
+	m_animated_sprite = s;
+	m_current->right(this, s);
 }
 
-void Animation::hammering()
+void Animation::hammering(AnimatedSprite& s)
 {
-	m_current->hammering(this);
+	m_animated_sprite = s;
+	m_current->hammering(this, s);
 }

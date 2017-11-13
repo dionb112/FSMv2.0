@@ -38,6 +38,7 @@
     <ClCompile Include="Jumping.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

@@ -16,6 +16,7 @@ public:
 	Player(const AnimatedSprite&);
 	~Player();
 	AnimatedSprite& getAnimatedSprite();
+	void setAnimatedSprite(AnimatedSprite&);
 	void handleInput(Input);
 	void update();
 };

@@ -1,6 +1,8 @@
 #ifndef ANIMATION_H
 #define ANIMATION_H
 
+#include <AnimatedSprite.h>
+
 class Animation
 {
 
@@ -9,6 +11,8 @@ class Animation
 	// https://stackoverflow.com/questions/625799/resolve-build-errors-due-to-circular-dependency-amongst-classes
 
 private:
+	AnimatedSprite m_animated_sprite;
+
 	class State* m_current; // note order of m_current is 
 							// prior to setCurrent
 	class State* m_previous;
@@ -20,12 +24,12 @@ public:
 	State* getCurrent();
 	State* getPrevious();
 	
-	void idle();
-	void jumping();
-	void climbing();
-	void left();
-	void right();
-	void hammering();
+	void idle(AnimatedSprite&);
+	void jumping(AnimatedSprite&);
+	void climbing(AnimatedSprite&);
+	void left(AnimatedSprite&);
+	void right(AnimatedSprite&);
+	void hammering(AnimatedSprite&);
 
 
 // Try uncommenting and comment the declaration above

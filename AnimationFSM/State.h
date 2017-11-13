@@ -15,30 +15,12 @@ public:
 
 	virtual void update() {}
 
-	virtual void idle(Animation* a)
-	{
-		DEBUG_MSG("State::Idling");
-	}
-	virtual void jumping(Animation* a)
-	{
-		DEBUG_MSG("State::Jumping");
-	}
-	virtual void climbing(Animation* a)
-	{
-		DEBUG_MSG("State::Climbing");
-	}
-	virtual void left(Animation* a)
-	{
-		DEBUG_MSG("State::WalkingLeft");
-	}
-	virtual void right(Animation* a)
-	{
-		DEBUG_MSG("State::WalkingRight");
-	}	
-	virtual void hammering(Animation* a)
-	{
-		DEBUG_MSG("State::Hammering");
-	}
+	virtual void idle(Animation* a, AnimatedSprite & s);
+	virtual void jumping(Animation* a, AnimatedSprite & s);
+	virtual void climbing(Animation* a, AnimatedSprite& s);
+	virtual void left(Animation* a, AnimatedSprite & s);
+	virtual void right(Animation* a, AnimatedSprite & s);	
+	virtual void hammering(Animation* a, AnimatedSprite & s);
 };
 
 #endif // ! ANIMATION_H
